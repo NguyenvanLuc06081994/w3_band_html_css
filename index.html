@@ -89,7 +89,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -98,7 +98,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -107,7 +107,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -153,5 +153,30 @@
             </footer>
         </div>
     </div>
+    <script type="text/javascript">
+        const buyBtns = document.querySelectorAll('.js-buy-tickets');
+        const modal = document.querySelector('.modal');
+        const hideModalBtn = document.querySelector('.modal-header-close');
+        const modalContainer = document.querySelector('.modal-container');
+        function showModal(){
+            modal.classList.add('open');
+        }
+
+        function hideModal(){
+            modal.classList.remove('open');
+        }
+
+        for (const buyBtn of buyBtns){
+            buyBtn.addEventListener('click', showModal);
+        }
+
+        hideModalBtn.addEventListener('click', hideModal);
+
+        modal.addEventListener('click',hideModal)
+
+        modalContainer.addEventListener('click',function (event){
+            event.stopPropagation();
+        })
+    </script>
 </body>
 </html>
