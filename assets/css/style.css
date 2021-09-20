@@ -17,6 +17,7 @@
 */
 
 html {
+    scroll-behavior: smooth; /* hành vi khi cuộn */
     font-family: Helvetica, arial, sans-serif;
 }
 /* các class chung */
