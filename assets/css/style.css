@@ -85,7 +85,7 @@ html {
 }
 
 .pull-right {
-    float: right;
+    float: right !important;
 }
 
 /* Main */
@@ -201,7 +201,7 @@ html {
 
 #content .content-section {
     width : 800px;
-    padding: 64px 0px;
+    padding: 64px 0px 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -280,8 +280,6 @@ html {
 /* Places */
 .places-list {
     margin-top: 32px;
-    margin-bottom: 48px;
-    padding-bottom : 48px;
 }
 
 .place-img{
@@ -459,3 +457,31 @@ html {
     padding : 10px 16px;
     float : right;
 }
+.map-section img{
+    width: 100%;
+}
+
+#footer {
+    height: 216px;
+    padding: 64px 16px;
+    text-align: center;
+}
+.social-list {
+    font-size: 24px;
+}
+
+.social-list a,
+.footer-text a{
+    text-decoration: none;
+    color :rgba(0, 0, 0, 0.6);
+}
+.social-list a:hover{
+    opacity: 0.5;
+}
+
+.footer-text {
+    margin-top: 15px;
+    color : rgba(0, 0, 0, 0.6);
+}
+
+
